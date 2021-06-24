@@ -1,4 +1,4 @@
-import logo1 from './images/EssentialBrandsLogoWhite.png';
+import logo1 from './images/EssentialBrandsLogo.png';
 import logo2 from './images/ForbiddenGardenLogo.png';
 import logo3 from './images/PureOrganticLogo.png';
 import './App.css';
@@ -29,6 +29,7 @@ function App() {
             </div>
           </div>
           <div className="navbar">
+            <Link to="/"><button>HOME</button></Link>
             <Link to="/products"><button>PRODUCTS</button></Link>
             <Link to="/about"><button>ABOUT</button></Link>
             <Link to="/learn"><button>LEARN</button></Link>

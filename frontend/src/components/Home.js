@@ -1,25 +1,26 @@
 import React from 'react'
+import terpenesImage from '../images/terpene-stock1.jpeg'
+import leafAndBottleImage from '../images/cbd-stock5.jpeg'
+import creamAndLeafImage from '../images/cbd-stock3.jpeg'
+import "./Home.css"
 export default function Home(props) {
   return (
-    <div className="Home" style={{height: '100%'}}>
+    <div className="Home">
       <div>
-        <h1>Research-Based</h1>
-        <h1>Natural CBD Products</h1>
+        <h1>WELCOME TO ESSENTIAL BRANDS</h1>
       </div>
-      <div className="content" style={{
-        backgroundColor: "white",
-        display: "flex",
-        flexDirection: "row",
-        height: "100%"
-        }}>
-        <div className="content-box" style={{backgroundColor: "grey"}}>
-          <h2>content</h2>
+      <div className="content-boxes">
+        <div className="content-box">
+          <img className="content-box-image" src={terpenesImage} alt="terpenes"/>
+          <div className="content-box-text">Learn About Terpenes</div>
         </div>
-        <div className="content-box" style={{backgroundColor: "grey"}}>
-          <h2>content</h2>
+        <div className="content-box">
+          <img className="content-box-image" src={leafAndBottleImage} alt="where to find us"/>
+          <div className="content-box-text">Where To Find Us</div>
         </div>
-        <div className="content-box" style={{backgroundColor: "grey"}}>
-          <h2>content</h2>
+        <div className="content-box">
+          <img className="content-box-image" src={creamAndLeafImage} alt="our products"/>
+          <div className="content-box-text">Our Products</div>
         </div>
       </div>
 
