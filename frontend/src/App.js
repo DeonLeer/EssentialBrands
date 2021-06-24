@@ -1,6 +1,7 @@
 import logo1 from './images/EssentialBrandsLogo.png';
 import logo2 from './images/ForbiddenGardenLogo.png';
 import logo3 from './images/PureOrganticLogo.png';
+import logo4 from './images/highProfile.png';
 import './App.css';
 import React from 'react';
 import {
@@ -26,6 +27,7 @@ function App() {
             <div className="OtherLogos">
               <img className="ForbiddenGardenLogo" src={logo2} alt='Forbidden Garden Logo'/>
               <img className="PureOrganticLogo" src={logo3} alt='Pure Organtic Logo'/>
+              <img className="HighProfileLogo" src={logo4} alt='High Profile Logo' />
             </div>
           </div>
           <div className="navbar">

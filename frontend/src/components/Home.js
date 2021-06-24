@@ -1,7 +1,7 @@
 import React from 'react'
 import terpenesImage from '../images/terpene-stock1.jpeg'
 import leafAndBottleImage from '../images/cbd-stock5.jpeg'
-import creamAndLeafImage from '../images/cbd-stock3.jpeg'
+import creamImage from '../images/cbd-stock6.jpeg'
 import "./Home.css"
 export default function Home(props) {
   return (
@@ -19,7 +19,7 @@ export default function Home(props) {
           <div className="content-box-text">Where To Find Us</div>
         </div>
         <div className="content-box">
-          <img className="content-box-image" src={creamAndLeafImage} alt="our products"/>
+          <img className="content-box-image" src={creamImage} alt="our products"/>
           <div className="content-box-text">Our Products</div>
         </div>
       </div>

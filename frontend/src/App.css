@@ -17,16 +17,22 @@
   width: 20vw;
 }
 .OtherLogos {
+  display: flex;
+  justify-content: space-between;
   margin-left: 1.25VW;
-  width: 10vw;
+  width: 15vw;
   height: 4vw;
   background-color: #8badd2;
 }
 .ForbiddenGardenLogo {
-  width: 50%;
+  width: 33%;
 }
 .PureOrganticLogo {
-  width: 50%;
+  width: 33%;
+}
+.HighProfileLogo {
+  width: 33%;
+  height: 4vw;
 }
 .navbar {
   margin-right: 1.5vw;
