@@ -1,3 +1,6 @@
+const database = require('./database');
+const apiRoutes = require('./apiRoutes')
+
 const Express = require('express');
 const App = Express();
 const BodyParser = require('body-parser');
@@ -7,4 +10,8 @@ App.use(BodyParser.urlencoded({ extended: false }));
 App.use(BodyParser.json());
 App.use(Express.static('public'));
 
-App.get('/api/')
+//api endpoints
+const apiRouter = Express.Router();
+apiRoutes(apiRouter, database);
+App.use('/api', apiRouter)
+App.listen(PORT, (err) => console.log(err || `listening on port ${PORT}`))

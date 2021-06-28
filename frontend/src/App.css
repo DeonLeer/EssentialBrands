@@ -53,6 +53,7 @@ button {
 button:hover {
   background-color:#b6cbe2;
   cursor: pointer;
+  color: white;
 }
 .content {
   background-color: #E5EEF7

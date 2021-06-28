@@ -1,0 +1,14 @@
+.Products {
+  text-align: center;
+}
+.brand-buttons {
+  display: flex;
+}
+.brand-button {
+  width: 10vw;
+  height: 10vw;
+  background-color: #E5EEF7;
+}
+.brand-button-image {
+  width: 100%;
+}
