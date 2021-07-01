@@ -16,7 +16,7 @@ const pool = new Pool({
 // })
 
 const getAllProducts = function() {
-  return pool.query(`SELECT name FROM products`)
+  return pool.query(`SELECT * FROM products`)
   .then((data) => {
     return data.rows;
   });
