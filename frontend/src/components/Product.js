@@ -59,7 +59,7 @@ export default function Products(props) {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">Ingredients</DialogTitle>
+        <DialogTitle id="scroll-dialog-title">Description</DialogTitle>
         <DialogContent >
           <DialogContentText
             id="scroll-dialog-description"

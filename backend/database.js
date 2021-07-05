@@ -16,7 +16,7 @@ const pool = new Pool({
 // })
 
 const getAllProducts = function() {
-  return pool.query(`SELECT * FROM products`)
+  return pool.query(`SELECT * FROM products ORDER BY brandid DESC;`)
   .then((data) => {
     return data.rows;
   });

@@ -31,11 +31,11 @@ function App() {
             </div>
           </div>
           <div className="navbar">
-            <Link to="/"><button>HOME</button></Link>
-            <Link to="/products"><button>PRODUCTS</button></Link>
-            <Link to="/about"><button>ABOUT</button></Link>
-            <Link to="/learn"><button>LEARN</button></Link>
-            <Link to="/contact"><button>CONTACT</button></Link>
+            <Link to="/"><button className="nav-button">HOME</button></Link>
+            <Link to="/products"><button className="nav-button">PRODUCTS</button></Link>
+            <Link to="/about"><button className="nav-button">ABOUT</button></Link>
+            <Link to="/learn"><button className="nav-button">LEARN</button></Link>
+            <Link to="/contact"><button className="nav-button">CONTACT</button></Link>
           </div>
         </div>
         <div className="content">

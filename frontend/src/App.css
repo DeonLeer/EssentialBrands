@@ -37,9 +37,11 @@
 .navbar {
   margin-right: 1.5vw;
 }
-button {
+.nav-button {
   background-color: white;
   margin-top: 2.5vh;
+  margin-left: 0px;
+  margin-right: 0px;
   border: none;
   width: 7.5vw;
   height: 5vh;
