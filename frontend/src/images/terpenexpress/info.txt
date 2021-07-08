@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Aganè 55 (roman) sign
+font link: https://www.graphicpear.com/agane-free-font/
+font author: Danilo De Marco
+font author site: http://www.danilodemarco.com/
+
+
+icon designer: Mooms
+icon designer link: /mooms
+        
+{"bg":"#00242B","icon":"#7DE38D","font":"#7DE38D","slogan":"#91f7a1"}
+      

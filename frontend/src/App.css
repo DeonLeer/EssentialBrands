@@ -20,18 +20,22 @@
   display: flex;
   justify-content: space-between;
   margin-left: 1.25VW;
-  width: 15vw;
+  width: 20vw;
   height: 4vw;
   background-color: #8badd2;
 }
 .ForbiddenGardenLogo {
-  width: 33%;
+  width: 25%;
 }
 .PureOrganticLogo {
-  width: 33%;
+  width: 25%;
 }
 .HighProfileLogo {
-  width: 33%;
+  width: 25%;
+  height: 4vw;
+}
+.TerpeneXpressLogo {
+  width: 24%;
   height: 4vw;
 }
 .navbar {

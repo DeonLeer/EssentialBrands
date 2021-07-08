@@ -1,4 +1,9 @@
+.ProductsMain {
+  text-align: center;
+}
 .Products {
+  margin-left: 20vw;
+  margin-right: 20vw;
   text-align: center;
   display: flex;
   flex-wrap: wrap;

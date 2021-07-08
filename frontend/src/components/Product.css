@@ -2,16 +2,15 @@
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  width: 15vw;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
   margin-bottom: 25px;
   box-shadow: 4px 4px lightgray;
 }
 .product-image {
-  height: 20vh;
-  margin: 10px;
+  height: 10vh;
+  margin: 7.5px;
 }
 .product-name {
   font-weight: 700;

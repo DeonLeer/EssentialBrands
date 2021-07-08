@@ -49,7 +49,7 @@ export default function Products(props) {
       <Image cloudName="deonleer" publicId={`${props.product.id}/1.png`} className="product-image"/>
       <div className="size">{props.product.size}{props.product.size_unit}</div>
       <div className="cbd-content">CBD Content: {props.product.cbd_mg} mg</div>
-      <div className="thc-percent">THC Content: {props.product.thc_percent*0.01}%</div>
+      <div className="thc-percent">THC Content: {props.product.tbh_percent*0.01}%</div>
       <div className="product-price">${props.product.price}.00</div>
       <button onClick={handleClickOpenDesc('paper')}>More Info</button>
       <button onClick={handleClickOpenIngred('paper')}>View Ingredients</button>
