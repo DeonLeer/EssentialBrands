@@ -14,4 +14,4 @@ App.use(Express.static('public'));
 const apiRouter = Express.Router();
 apiRoutes(apiRouter, database);
 App.use('/api', apiRouter)
-App.listen(PORT, (err) => console.log(err || `listening on port ${PORT}`))
+App.listen((process.env['PORT'] || PORT), (err) => console.log(err || `listening on port ${PORT}`))

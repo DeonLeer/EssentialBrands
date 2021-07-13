@@ -1,0 +1,32 @@
+.terpenes {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 15vw;
+  height: 25vh;
+  margin: 10px;
+  padding: 10px;
+}
+.terpene-name {
+  font-weight: 700;
+}
+.terpene-bottle {
+  height: 14vh;
+  width: 7vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+.terpene-bottle:hover {
+  display: none
+}
+.pie-chart {
+  display: none;
+}
+.pie-chart:hover {
+  display: flex
+}
+.name-and-price {
+  display: flex;
+  justify-content: space-between;
+}
