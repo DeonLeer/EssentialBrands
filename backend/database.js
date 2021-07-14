@@ -22,3 +22,10 @@ const getAllProducts = function() {
   });
 };
 exports.getAllProducts = getAllProducts;
+const getAllTerpenes = function() {
+  return pool.query(`SELECT * FROM terpenes;`)
+  .then((data) => {
+    return data.rows;
+  });
+};
+exports.getAllTerpenes = getAllTerpenes;

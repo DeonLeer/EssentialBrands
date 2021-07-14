@@ -1,4 +1,4 @@
-import logo1 from './images/EssentialBrandsLogo.png';
+import logo1 from './images/EBI_Logo_Feb21.jpg';
 import logo2 from './images/ForbiddenGardenLogo.png';
 import logo3 from './images/PureOrganticLogo.png';
 import logo4 from './images/highProfile.png';

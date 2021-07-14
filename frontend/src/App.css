@@ -14,7 +14,7 @@
 }
 .EssentialBrandsLogo {
   width: 10vw;
-  margin-top: 0.25vw;
+  margin-top: 0.75vw;
 }
 .OtherLogos {
   display: flex;
@@ -22,10 +22,10 @@
   margin-left: 1.25VW;
   width: 20vw;
   height: 4vw;
-  background-color: #8badd2;
 }
 .ForbiddenGardenLogo {
   width: 25%;
+  background-color: rgb(107, 106, 106);
 }
 .PureOrganticLogo {
   width: 25%;
@@ -56,7 +56,7 @@
   color: black;
 }
 button:hover {
-  background-color:#b6cbe2;
+  background-color:#33415b;
   cursor: pointer;
   color: white;
 }
