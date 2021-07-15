@@ -26,7 +26,7 @@ export default function Products() {
   if (loading) return null
   return (
     <div className="ProductsMain">
-      <h1>Our Products</h1>
+      <h1>Our CBD Products</h1>
       <div className="filters">
         <Link to="/products"><button className="brand-button">All Products</button></Link>
         <Link to="/products/forbiddengarden"><button className="brand-button">Forbidden Garden</button></Link>

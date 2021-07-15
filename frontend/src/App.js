@@ -17,6 +17,8 @@ import Products from './components/Products';
 import Learn from './components/Learn';
 import Contact from './components/ContactUs';
 import Terpenes from './components/Terpenes';
+import FAQ from './components/FAQ';
+import Brands from './components/Brands';
 function App() {
   return (
     <Router>
@@ -36,14 +38,19 @@ function App() {
           {/* TODO: ADD DROP DOWN MENUS: PRODUCTS-> FG, PO, HP, TX, LEARN -> CBD, TERPENES, ABOUT -> WHO WE ARE */}
           <div className="navbar">
             <Link to="/"><button className="nav-button">HOME</button></Link>
-            <Link to="/products" className="link"><button className="nav-button">PRODUCTS</button>
+            <Link to="/products" className="link"><button className="nav-button">CBD PRODUCTS</button>
               <div className="dropdown-content">
                 <Link to="/products/forbiddengarden">Forbidden Gardens</Link>
                 <Link to="/products/pureorgantic">Pure Organtic</Link>
                 <Link to="/products/pawsitive">Pawsitive</Link>
               </div></Link>
-              <Link to="/terpenes"><button className="nav-button">TERPENES</button></Link>
-            <Link to="/about"><button className="nav-button">ABOUT</button></Link>
+            <Link to="/terpenes"><button className="nav-button">TERPENES</button></Link>
+            <Link to="/about" className="link"><button className="nav-button">ABOUT</button>
+              <div className="dropdown-content">
+                <Link to="/about">About Us</Link>
+                <Link to="/about/brands">Our Brands</Link>
+                <Link to="/about/faq">FAQ</Link>
+              </div></Link>
             <Link to="/learn"><button className="nav-button">LEARN</button></Link>
             <Link to="/contact"><button className="nav-button">CONTACT</button></Link>
             <Link to="/invest"><button className="nav-button">INVEST</button></Link>
@@ -51,6 +58,12 @@ function App() {
         </div>
         <div className="content">
           <Switch>
+            <Route path="/about/faq">
+              <FAQ />
+            </Route>
+            <Route path="/about/brands">
+              <Brands />
+            </Route>
             <Route path="/about">
               <About />
             </Route>

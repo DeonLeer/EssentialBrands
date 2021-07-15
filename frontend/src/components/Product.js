@@ -62,8 +62,8 @@ export default function Products(props) {
       <div className="thc-percent">THC Content: {props.product.tbh_percent*0.01}%</div>
       <div className="product-price">${props.product.price}.00</div>
       <div className="dialogues">
-        <button onClick={handleClickOpenDesc('paper')}>More Info</button>
-        <button onClick={handleClickOpenIngred('paper')}>View Ingredients</button>
+        <button className="productButton" onClick={handleClickOpenDesc('paper')}>More Info</button>
+        <button className="productButton" onClick={handleClickOpenIngred('paper')}>View Ingredients</button>
       </div>
       <Dialog
         open={openDesc}

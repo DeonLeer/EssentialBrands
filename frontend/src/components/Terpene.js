@@ -47,13 +47,13 @@ export default function Terpene(props) {
           <PieChart
             data={pieChartData(props.terpene)}
             className="pie-chart"
-            label={({ dataEntry }) => `${dataEntry.title}, ${dataEntry.value}%`}
+            label={({ dataEntry }) => `${dataEntry.title}\n ${dataEntry.value}%`}
             labelStyle={(index) => ({
-              fontSize: '4px',
+              fontSize: '3.5px',
               fontFamily: 'sans-serif',
             })}
             labelPosition={116}
-            radius={25}
+            radius={22}
             animate
             viewBoxSize={[100,75]}
             center={[50, 40]}

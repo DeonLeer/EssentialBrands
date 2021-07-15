@@ -1,5 +1,4 @@
 .Product {
-  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   width: 15vw;
@@ -25,8 +24,8 @@
   font-size: 1.2vw;
   color: #4F7DAE;
 }
-button {
-  background-color: aliceblue;
+.productButton {
+  background-color: white;
   border: none;
   width: 5vw;
   height: 5vh;
@@ -36,6 +35,11 @@ button {
   font-size: 0.8vw;
   color: black;
   margin: 4px;
+}
+.productButton:hover {
+  background-color:#33415b;
+  cursor: pointer;
+  color: white;
 }
 .dialogues {
   display: flex;
