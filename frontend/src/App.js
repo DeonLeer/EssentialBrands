@@ -3,6 +3,7 @@ import logo2 from './images/ForbiddenGardenLogo.png';
 import logo3 from './images/PureOrganticLogo.png';
 import logo4 from './images/highProfile.png';
 import logo5 from './images/terpenexpress/vector/default-monochrome.svg'
+import cart from './images/cart.png'
 import './App.css';
 import React from 'react';
 import {
@@ -12,13 +13,16 @@ import {
   Link
 } from 'react-router-dom';
 import Home from "./components/Home";
-import About from './components/About';
-import Products from './components/Products';
-import Learn from './components/Learn';
+import About from './components/about/About';
+import Products from './components/products/Products';
 import Contact from './components/ContactUs';
-import Terpenes from './components/Terpenes';
-import FAQ from './components/FAQ';
-import Brands from './components/Brands';
+import Terpenes from './components/terpenes/Terpenes';
+import FAQ from './components/about/FAQ';
+import Brands from './components/about/Brands';
+import Cart from './components/Cart';
+import CBD from './components/learn/CBD';
+import TerpenesLearn from './components/learn/TerpenesLearn';
+import Entourage from './components/learn/Entourage';
 function App() {
   return (
     <Router>
@@ -51,13 +55,32 @@ function App() {
                 <Link to="/about/brands">Our Brands</Link>
                 <Link to="/about/faq">FAQ</Link>
               </div></Link>
-            <Link to="/learn"><button className="nav-button">LEARN</button></Link>
+              <Link className="link"><button className="nav-button">LEARN</button>
+              <div className="dropdown-content">
+                <Link to="/learn/terpenes">About Terpenes</Link>
+                <Link to="/learn/cbd">About CBD</Link>
+                <Link to="/learn/entourage">Entourage Effect</Link>
+              </div></Link>
             <Link to="/contact"><button className="nav-button">CONTACT</button></Link>
             <Link to="/invest"><button className="nav-button">INVEST</button></Link>
+            <Link to="/cart"><img className="cart" src={cart} alt="shopping cart"/></Link>
           </div>
         </div>
         <div className="content">
           <Switch>
+            
+            <Route path="/learn/cbd">
+              <CBD/>
+            </Route>
+            <Route path="/learn/terpenes/:terpene">
+              <TerpenesLearn />
+            </Route>
+            <Route path="/learn/terpenes">
+              <TerpenesLearn />
+            </Route>
+            <Route path="/learn/entourage">
+              <Entourage/>
+            </Route>
             <Route path="/about/faq">
               <FAQ />
             </Route>
@@ -70,17 +93,17 @@ function App() {
             <Route path="/products">
               <Products />
             </Route>
-            <Route path="/learn">
-              <Learn />
-            </Route>
             <Route path="/contact">
               <Contact />
             </Route>
             <Route path="/terpenes">
-              <Terpenes></Terpenes>
+              <Terpenes />
             </Route>
             <Route path="/">
               <Home />
+            </Route>
+            <Route path="/">
+              <Cart />
             </Route>
           </Switch>
         </div>

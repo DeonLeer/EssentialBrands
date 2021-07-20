@@ -1,0 +1,47 @@
+.TerpenesLearn {
+  text-align: center;
+  margin-top: 2%;
+}
+.TerpenesContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.TerpenesLearnText {
+  width: 50%;
+  font-size: 150%;
+}
+.TerpenesImg {
+  width: 40%;
+}
+.specTerpName {
+  margin-top: 2%;
+}
+.specTerpText {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  margin-left: 1%;
+  margin-right: 10%;
+  font-size: 200%;
+}
+.TerpLearnButtons {
+  margin-bottom: 5%;
+}
+.TerpLearnButton {
+  background-color: white;
+  margin-top: 2.5vh;
+  margin-left: 0px;
+  margin-right: 0px;
+  border: none;
+  width: 7.5%;
+  transition-duration: 0.6s;
+  font-family: 'Cardo', serif;
+  font-weight: 700;
+  font-size: 100%;
+  color: black;
+}
+.TerpLearnButton:hover {
+  background-color:#33415b;
+  cursor: pointer;
+  color: white;
+}

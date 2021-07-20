@@ -39,8 +39,16 @@
   height: 4vw;
 }
 .navbar {
-  margin-right: 1.5vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
+.cart {
+  width: 1vw;
+  margin-right: 2vw;
+  margin-left: 1vw;
+}
+
 .nav-button {
   background-color: white;
   margin-top: 2.5vh;
@@ -93,3 +101,4 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .link:hover .dropbtn {background-color: #3e8e41;}
+
