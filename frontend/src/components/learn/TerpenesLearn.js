@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './TerpenesLearn.css'
 import TerpenesImg from '../../images/Terps.png'
 import {
@@ -7,9 +7,6 @@ import {
 } from "react-router-dom";
 
 export default function TerpenesLearn(props) {
-  const moreInfo = useRef(null)
-  const terp = useParams();
-  const selectedTerp = terp.terpene
   const terpeneList = {
     apinene: {
       name : 'α-Pinene & β-Pinene',
@@ -71,6 +68,31 @@ export default function TerpenesLearn(props) {
     'terpinoline',
     'ocimene'	
   ]
+  const moreInfo = useRef(null)
+  const terp = useParams();
+  let selectedTerp = null;
+  if (terpeneList[terp.terpene]) {
+    selectedTerp = terp.terpene
+  }
+  const scrollToBottomOfMoreInfo = () => {
+    window.scrollTo({
+      behavior: "smooth",
+      // Checking reference.current isn't falsy before grabbing .offsetTop
+      top: moreInfo.current
+        ? document.body.scrollHeight 
+        : undefined,
+    })
+  }
+  useEffect(() => {
+    if (selectedTerp) {
+      console.log('here')
+      scrollToBottomOfMoreInfo();
+    }
+  }, [selectedTerp])
+
+
+
+
   return (
     <div className="TerpenesLearn">
       <h1>What Are Terpenes?</h1>
@@ -85,7 +107,7 @@ export default function TerpenesLearn(props) {
         <div className ="TerpLearnButtons">
           {terpsArray.map(terpItem => {
             return (
-              <Link to={`/learn/terpenes/${terpItem}`}><button className="TerpLearnButton">{terpeneList[terpItem]['name']}</button></Link>
+              <Link className="TerpLearnButtonLink" to={`/learn/terpenes/${terpItem}`}><button className="TerpLearnButton">{terpeneList[terpItem]['name']}</button></Link>
             )
           })}
         </div>
@@ -95,8 +117,6 @@ export default function TerpenesLearn(props) {
             <p className="specTerpText">{terpeneList[selectedTerp].description}</p>
           </div>
         ) : null}
-        {(selectedTerp) ? 
-        ()=>window.scrollTo(0,document.body.scrollHeight) : null}
       </div>
     </div>
   )

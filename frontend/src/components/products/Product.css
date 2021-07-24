@@ -45,3 +45,30 @@
   display: flex;
   flex-direction: row;
 }
+.actions {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.addToCart {
+  border-top: solid rgb(10, 10, 70);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.ARButtons {
+  font-size: 150%;
+}
+.ARButton {
+  font-size: 100%;
+  border: none;
+  background-color: white;
+}
+.ARButton:hover {
+  cursor: pointer;
+}

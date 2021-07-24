@@ -1,0 +1,98 @@
+.Cart {
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+}
+.CartBody {
+  display: flex;
+}
+.CartItems {
+  width: 70%;
+}
+.CBDCartItems {
+  display: flex;
+  flex-direction: column;
+}
+.CBDCartHeader {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.5%;
+}
+.CBDCartItem {
+  margin-top: 1.5;
+  margin-bottom: 1.5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.CBDName {
+  width: 45%
+}
+.CBDPrice {
+  width: 20%
+}
+.CBDQuantity{
+  width: 15%
+}
+.CBDCost{
+  width: 20%
+}
+.CBDNameHead {
+  width: 45%
+}
+.CBDPriceHead {
+  width: 20%
+}
+.CBDQuantityHead {
+  width: 15%
+}
+.CBDCostHead{
+  width: 20%
+}
+.TerpCartItems {
+  display: flex;
+  flex-direction: column;
+}
+.TerpCartHeader {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.5%;
+}
+.TerpCartItem {
+  margin-top: 1.5;
+  margin-bottom: 1.5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.TerpName {
+  width: 30%
+}
+.TerpSize {
+  width: 15%
+}
+.TerpPrice {
+  width: 20%
+}
+.TerpQuantity {
+  width: 15%
+}
+.TerpCost{
+  width: 20%
+}
+.TerpNameHead {
+  width: 30%
+}
+.TerpSizeHead {
+  width: 15%
+}
+.TerpPriceHead {
+  width: 20%
+}
+.TerpQuantityHead {
+  width: 15%
+}
+.TerpCostHead{
+  width: 20%
+}
+.OrderSummary {
+  width: 30%
+}

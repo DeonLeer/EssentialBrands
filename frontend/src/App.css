@@ -44,7 +44,7 @@
   justify-content: flex-end;
 }
 .cart {
-  width: 1vw;
+  width: 1.4vw;
   margin-right: 2vw;
   margin-left: 1vw;
 }
@@ -59,8 +59,8 @@
   height: 3vh;
   transition-duration: 0.6s;
   font-family: 'Cardo', serif;
-  font-weight: 700;
-  font-size: 0.5vw;
+  font-weight: 550;
+  font-size: 0.7vw;
   color: black;
 }
 .nav-button:hover {
