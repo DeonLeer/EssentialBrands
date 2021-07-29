@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import "./Cart.css";
 export default function Cart(props) {
 	const currentCart = props.getCart();
@@ -28,7 +29,6 @@ export default function Cart(props) {
 		}
 		return fixedSize;
 	};
-	console.log(currentCart);
 	if (!currentCart || !Object.values(currentCart).length) {
 		return (
 			<div className="Cart">
@@ -89,7 +89,6 @@ export default function Cart(props) {
 								<button
 									onClick={() => {
 										for (let item of cartArray) {
-											console.log(item);
 											if (item.slice(0, 3) === "CBD") {
 												props.editProduct(item, 0);
 											}
@@ -98,7 +97,7 @@ export default function Cart(props) {
 								>
 									Clear All CBD Products
 								</button>
-								<div className="CBDSubtotal">Total: ${cbdTotal}</div>
+								<div className="CBDSubtotal">Total: ${cbdTotal.toFixed(2)}</div>
 							</div>
 						)}
 						{!!terpTotal && (
@@ -129,7 +128,6 @@ export default function Cart(props) {
 								<button
 									onClick={() => {
 										for (let item of cartArray) {
-											console.log(item);
 											if (item.slice(0, 3) === "TRP") {
 												props.editProduct(item, 0);
 											}
@@ -138,7 +136,7 @@ export default function Cart(props) {
 								>
 									Clear All Terpene Products
 								</button>
-								<div className="TerpSubtotal">Total: ${terpTotal}</div>
+								<div className="TerpSubtotal">Total: ${terpTotal.toFixed(2)}</div>
 							</div>
 						)}
 						<div className="ItemsBottom" style={{ marginTop: "3%" }}>
@@ -149,8 +147,9 @@ export default function Cart(props) {
 					</div>
 					<div className="OrderSummary">
 						<h3>Order Summary</h3>
-						<p>Item Subtotal: ${cbdTotal + terpTotal}</p>
-						<p>After Tax: ${(cbdTotal + terpTotal) * 1.3}</p>
+						<p>Item Subtotal: ${(cbdTotal + terpTotal).toFixed(2)}</p>
+						<p>After Tax: ${((cbdTotal + terpTotal) * 1.3).toFixed(2)}</p>
+						<Link to='/checkout'><button className='Checkout-Button'>Checkout</button></Link>
 					</div>
 				</div>
 			</div>

@@ -22,14 +22,12 @@ export default function useCart() {
 				let newCart = cookies["Cart"];
 				newCart[itemId].quantity = Number(newCart[itemId].quantity) + Number(itemObj.quantity);
 				setCookie("Cart", newCart, { path: "/" });
-				console.log("item added", cookies["Cart"]);
 				return cookies["Cart"];
 			}
 		}
 	};
 
   const editProduct = (itemId, quantity) => {
-		console.log('editing product')
     let newCart = cookies["Cart"];
     quantity = Number(quantity)
     if (quantity < 0) {

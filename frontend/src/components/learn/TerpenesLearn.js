@@ -85,7 +85,6 @@ export default function TerpenesLearn(props) {
   }
   useEffect(() => {
     if (selectedTerp) {
-      console.log('here')
       scrollToBottomOfMoreInfo();
     }
   }, [selectedTerp])

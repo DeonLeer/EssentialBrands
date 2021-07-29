@@ -19,7 +19,12 @@ import TerpenesLearn from "./components/learn/TerpenesLearn";
 import Entourage from "./components/learn/Entourage";
 import Cart from "./components/cart/Cart";
 import useCart from "./hooks/useCart";
+import CheckoutForm from './components/checkout/CheckoutForm'
 import axios from 'axios';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js'
+require('dotenv').config();
+const stripe = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 function App() {
 	const { getCart, addProduct, editProduct, removeProduct, removeAllProducts } =
 		useCart();
@@ -28,7 +33,6 @@ function App() {
   const [terpenes, setTerpenes] = useState([])
   const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
-	console.log(currentCart);
 	let cartNum = 0;
 	for (let item in currentCart) {
 		cartNum = cartNum + currentCart[item].quantity;
@@ -113,7 +117,7 @@ function App() {
 								<Link to="/about/faq">FAQ</Link>
 							</div>
 						</Link>
-						<Link className="link">
+						<Link to="/learn/terpenes" className="link">
 							<button className="nav-button">LEARN</button>
 							<div className="dropdown-content">
 								<Link to="/learn/terpenes">About Terpenes</Link>
@@ -179,6 +183,13 @@ function App() {
 								removeProduct={removeProduct}
 								removeAllProducts={removeAllProducts}
 							/>
+						</Route>
+						<Route path='/checkout'>
+							<Elements stripe={stripe}>
+								<CheckoutForm
+								currentCart = {currentCart}
+								 />
+							</Elements>
 						</Route>
 						<Route path="/">
 							<Home />

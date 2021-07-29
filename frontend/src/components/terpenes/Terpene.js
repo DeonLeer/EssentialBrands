@@ -158,7 +158,8 @@ export default function Terpene(props) {
             className="terpeneButton" 
             onClick={()=>{
 							let cartItemObj = props.terpene;
-              cartItemObj.quantity = amount
+              cartItemObj.quantity = amount;
+							cartItemObj.size = size;
 							props.addProduct(`TRP${size}${props.terpene.id}`, cartItemObj)
 						}}
           >
