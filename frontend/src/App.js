@@ -187,7 +187,8 @@ function App() {
 						<Route path='/checkout'>
 							<Elements stripe={stripe}>
 								<CheckoutForm
-								currentCart = {currentCart}
+								getCart = {getCart}
+								removeAllProducts = {removeAllProducts}
 								 />
 							</Elements>
 						</Route>

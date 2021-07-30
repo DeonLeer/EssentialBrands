@@ -11,7 +11,7 @@ App.use(cors())
 App.use(BodyParser.urlencoded({ extended: false }));
 App.use(BodyParser.json());
 App.use(Express.static('public'));
-const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST || process.env.HEROKU_STRIPE_SECRET);
 //api endpoints
 const apiRouter = Express.Router();
 apiRoutes(apiRouter, database);

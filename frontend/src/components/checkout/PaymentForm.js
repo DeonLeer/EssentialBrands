@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import AdressForm from "./AddressForm";
 import {
 	CardElement,
 	useElements,
@@ -37,7 +36,7 @@ const sizeFormat = (size) => {
 
 
 
-export default function CheckoutForm(props) {
+export default function PaymentForm(props) {
 	const [succeeded, setSucceeded] = useState(false);
 	const [error, setError] = useState(null);
 	const [processing, setProcessing] = useState("");
@@ -45,7 +44,7 @@ export default function CheckoutForm(props) {
 	const [clientSecret, setClientSecret] = useState("");
 	const stripe = useStripe();
 	const elements = useElements();
-	const currentCart = props.getCart();
+	const currentCart = props.currentCart;
 	const cartArray = Object.keys(currentCart);
 	let total = 0;
 	for (let item in currentCart) {
@@ -116,7 +115,7 @@ export default function CheckoutForm(props) {
 
 	return (
 		<div className="checkoutPage">
-			<h1 style={{ textAlign: "center", width: '100vw' }}>Checkout</h1>
+			<h1 style={{ textAlign: "center" }}>Checkout</h1>
 			<div className="checkoutItems">
 				<table
 					width="100%"
@@ -177,10 +176,9 @@ export default function CheckoutForm(props) {
 					</tfoot>
 				</table>
 			</div>
-			<div className="addressForm">
-				<AdressForm />
+			<div className="checkoutForm">
 			</div>
-			<div className="paymentForm">
+			<div className="paymentform">
 				<form className="checkoutform" onSubmit={handleSubmit}>
 					<CardElement
 						id="card-element"
