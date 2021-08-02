@@ -1,0 +1,31 @@
+.WhiteLabeling {
+	text-align: center;
+	margin: 2%;
+}
+.text-image {
+	display: flex;
+	text-align: left;
+}
+.text-image img {
+  margin: 1%;
+}
+.text-image p {
+  margin: 1%;
+}
+.WLButton {
+	background-color: white;
+  margin-bottom: 2%;
+	border: none;
+	width: 10vw;
+	height: 3vh;
+	transition-duration: 0.6s;
+	font-family: "Cardo", serif;
+	font-weight: 550;
+	font-size: 0.7vw;
+	color: black;
+}
+.WLButton:hover {
+	background-color: #33415b;
+	cursor: pointer;
+	color: white;
+}

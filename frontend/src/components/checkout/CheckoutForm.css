@@ -164,3 +164,8 @@
     width: 80vw;
   }
 }
+
+.checkoutForms {
+  display: flex;
+  align-items: center;
+}

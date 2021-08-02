@@ -18,14 +18,8 @@ apiRoutes(apiRouter, database);
 App.post('/payment', async (req, res) => {
   const data = req.body;
   let total = 0;
-  for (let item in data) {
-		if (data[item].fiveg) {
-			total =
-				total +
-				data[item][data[item].size] * data[item].quantity;
-		} else {
-			total = total + data[item].cost * data[item].quantity;
-		}
+  for (let item of data) {
+		total = item.price * item.quantity
 	}
   const paymentIntent = await stripe.paymentIntents.create({
     amount: total*100,

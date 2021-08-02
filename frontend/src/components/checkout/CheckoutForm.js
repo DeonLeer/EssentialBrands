@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import AdressForm from "./AddressForm";
-import {
-	CardElement,
-	useElements,
-	useStripe,
-} from "@stripe/react-stripe-js";
+import PaymentForm from "./PaymentForm";
 import "./CheckoutForm.css";
 
 const sizeFormat = (size) => {
@@ -35,88 +30,37 @@ const sizeFormat = (size) => {
 	return fixedSize;
 };
 
-
-
 export default function CheckoutForm(props) {
-	const [succeeded, setSucceeded] = useState(false);
-	const [error, setError] = useState(null);
-	const [processing, setProcessing] = useState("");
-	const [disabled, setDisabled] = useState(true);
-	const [clientSecret, setClientSecret] = useState("");
-	const stripe = useStripe();
-	const elements = useElements();
 	const currentCart = props.getCart();
 	const cartArray = Object.keys(currentCart);
-	let total = 0;
+	const formattedCart = [];
 	for (let item in currentCart) {
 		if (currentCart[item].fiveg) {
-			total =
-				total +
-				currentCart[item][currentCart[item].size] * currentCart[item].quantity;
-			console.log(total);
+			formattedCart.push({
+				price: currentCart[item][currentCart[item].size],
+				name: currentCart[item].name,
+				id: currentCart[item].id,
+				quantity: currentCart[item].quantity,
+			});
 		} else {
-			total = total + currentCart[item].cost * currentCart[item].quantity;
-			console.log(total);
+			formattedCart.push({
+				price: currentCart[item].price,
+				name: currentCart[item].name,
+				id: currentCart[item].id,
+				quantity: currentCart[item].quantity,
+			});
 		}
 	}
-
-	useEffect(() => {
-		axios({
-			method: "post",
-			url: "https://essential-brands-backend.herokuapp.com/payment",
-			data: currentCart,
-		})
-			.then((res) => {
-				setClientSecret(res.data.clientSecret)
-			})
-	}, [currentCart]);
-
-	const cardStyle = {
-		style: {
-			base: {
-				color: "#32325d",
-				fontFamily: "Arial, sans-serif",
-				fontSmoothing: "antialiased",
-				fontSize: "16px",
-				"::placeholder": {
-					color: "#32325d",
-				},
-			},
-			invalid: {
-				color: "#fa755a",
-				iconColor: "#fa755a",
-			},
-		},
-	};
-
-	const handleChange = async (event) => {
-		// Listen for changes in the CardElement
-		// and display any errors as the customer types their card details
-		setDisabled(event.empty);
-		setError(event.error ? event.error.message : "");
-	};
-
-	async function handleSubmit(e) {
-		e.preventDefault();
-		setProcessing(true);
-		const payload = await stripe.confirmCardPayment(clientSecret, {
-			payment_method: {
-				card: elements.getElement(CardElement),
-			},
-		});
-		if (payload.error) {
-			setError(`Payment failed ${payload.error.message}`);
-			setProcessing(false);
-		} else {
-			setError(null);
-			setProcessing(false);
-			setSucceeded(true);
-		}
+	let total = 0;
+	for(let item of formattedCart) {
+		total = total + item.price*item.quantity;
 	}
+
+	const [validShipping, setValidShipping] = useState(false);
 
 	return (
 		<div className="checkoutPage">
-			<h1 style={{ textAlign: "center", width: '100vw' }}>Checkout</h1>
+			<h1 style={{ textAlign: "center", width: "100vw" }}>Checkout</h1>
 			<div className="checkoutItems">
 				<table
 					width="100%"
@@ -148,7 +92,7 @@ export default function CheckoutForm(props) {
 										$
 										{currentCart[product].fiveg
 											? currentCart[product][currentCart[product].size]
-											: currentCart[product].cost}
+											: currentCart[product].price}
 									</td>
 									<td>{currentCart[product].quantity}</td>
 									<td>
@@ -156,7 +100,7 @@ export default function CheckoutForm(props) {
 										{currentCart[product].fiveg
 											? currentCart[product][currentCart[product].size] *
 											  currentCart[product].quantity
-											: currentCart[product].cost *
+											: currentCart[product].price *
 											  currentCart[product].quantity}
 									</td>
 								</tr>
@@ -177,40 +121,18 @@ export default function CheckoutForm(props) {
 					</tfoot>
 				</table>
 			</div>
-			<div className="addressForm">
-				<AdressForm />
-			</div>
-			<div className="paymentForm">
-				<form className="checkoutform" onSubmit={handleSubmit}>
-					<CardElement
-						id="card-element"
-						options={cardStyle}
-						onChange={handleChange}
-					/>
-					<button className="checkoutbutton" disabled={processing || disabled || succeeded} id="submit">
-						<span id="button-text">
-							{processing ? (
-								<div className="spinner" id="spinner"></div>
-							) : (
-								"Pay now"
-							)}
-						</span>
-					</button>
-					{/* Show any error that happens when processing the payment */}
-					{error && (
-						<div className="card-error" role="alert">
-							{error}
-						</div>
-					)}
-					<p className={succeeded ? "result-message" : "result-message hidden"}>
-						Payment succeeded, see the result in your
-						<a href={`https://dashboard.stripe.com/test/payments`}>
-							{" "}
-							Stripe dashboard.
-						</a>{" "}
-						Refresh the page to pay again.
-					</p>
-				</form>
+			<div className="checkoutForms">
+				<div className="addressForm">
+					<AdressForm
+						setValidShipping={setValidShipping}
+					 />
+				</div>
+				<div className="paymentForm">
+					{validShipping ? (
+						<PaymentForm
+						 cart={formattedCart} />
+					) : null}
+				</div>
 			</div>
 		</div>
 	);

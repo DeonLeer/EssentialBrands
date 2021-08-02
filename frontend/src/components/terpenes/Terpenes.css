@@ -12,3 +12,7 @@
 .TerpenesTitle {
   text-align: center;
 }
+.type-checkboxes {
+  display: flex;
+  justify-content: center;
+}

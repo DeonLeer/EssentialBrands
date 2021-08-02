@@ -19,45 +19,51 @@ import TerpenesLearn from "./components/learn/TerpenesLearn";
 import Entourage from "./components/learn/Entourage";
 import Cart from "./components/cart/Cart";
 import useCart from "./hooks/useCart";
-import CheckoutForm from './components/checkout/CheckoutForm'
-import axios from 'axios';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js'
-require('dotenv').config();
+import CheckoutForm from "./components/checkout/CheckoutForm";
+import WhatWeDo from "./components/whiteLabel/WhatWeDo";
+import WhiteLabeling from "./components/whiteLabel/WhiteLabeling";
+import axios from "axios";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+require("dotenv").config();
 const stripe = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 function App() {
 	const { getCart, addProduct, editProduct, removeProduct, removeAllProducts } =
 		useCart();
 
 	const currentCart = getCart();
-  const [terpenes, setTerpenes] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [products, setProducts] = useState([])
+	const [terpenes, setTerpenes] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const [products, setProducts] = useState([]);
 	let cartNum = 0;
 	for (let item in currentCart) {
 		cartNum = cartNum + currentCart[item].quantity;
 	}
-  useEffect(() => {
-    axios.get('https://essential-brands-backend.herokuapp.com/api/products')
-    .then((response) => {
-      setProducts(prev => ({
-        ...prev,
-        products: response.data.products
-      }))
-      axios.get('https://essential-brands-backend.herokuapp.com/api/terpenes')
-      .then((response) => {
-        setTerpenes(prev => ({
-          ...prev,
-          terpenes: response.data.terpenes
-        }))
-        setLoading(false)
-      })
-    })}, [])
-  if (loading) return (
-    <div className="App">
-      <h1>LOADING</h1>
-    </div>
-  )
+	useEffect(() => {
+		axios
+			.get("https://essential-brands-backend.herokuapp.com/api/products")
+			.then((response) => {
+				setProducts((prev) => ({
+					...prev,
+					products: response.data.products,
+				}));
+				axios
+					.get("https://essential-brands-backend.herokuapp.com/api/terpenes")
+					.then((response) => {
+						setTerpenes((prev) => ({
+							...prev,
+							terpenes: response.data.terpenes,
+						}));
+						setLoading(false);
+					});
+			});
+	}, []);
+	if (loading)
+		return (
+			<div className="App">
+				<h1>LOADING</h1>
+			</div>
+		);
 	return (
 		<Router>
 			<div className="App">
@@ -125,6 +131,13 @@ function App() {
 								<Link to="/learn/entourage">Entourage Effect</Link>
 							</div>
 						</Link>
+						<Link to="/whitelabeling" className="link">
+							<button className="nav-button">WHITE LABELING</button>
+							<div className="dropdown-content">
+								<Link to="/whitelabeling">What is White Labeling?</Link>
+								<Link to="/whitelabeling/whatwedo">What we do</Link>
+							</div>
+						</Link>
 						<Link to="/contact">
 							<button className="nav-button">CONTACT</button>
 						</Link>
@@ -157,26 +170,28 @@ function App() {
 						<Route path="/about/brands">
 							<Brands />
 						</Route>
+						<Route path="/whitelabeling/whatwedo">
+							<WhatWeDo />
+						</Route>
 						<Route path="/about">
 							<About />
 						</Route>
+						<Route path="/whitelabeling">
+							<WhiteLabeling />
+						</Route>
 						<Route path="/products">
-							<Products 
-                products={products}
-                addProduct={addProduct} />
+							<Products products={products} addProduct={addProduct} />
 						</Route>
 						<Route path="/contact">
 							<Contact />
 						</Route>
 						<Route path="/terpenes">
-							<Terpenes 
-                terpenes={terpenes}
-                addProduct={addProduct} />
+							<Terpenes terpenes={terpenes} addProduct={addProduct} />
 						</Route>
 						<Route path="/cart">
 							<Cart
-                terpenes={terpenes}
-                products={products}
+								terpenes={terpenes}
+								products={products}
 								getCart={getCart}
 								addProduct={addProduct}
 								editProduct={editProduct}
@@ -184,12 +199,12 @@ function App() {
 								removeAllProducts={removeAllProducts}
 							/>
 						</Route>
-						<Route path='/checkout'>
+						<Route path="/checkout">
 							<Elements stripe={stripe}>
 								<CheckoutForm
-								getCart = {getCart}
-								removeAllProducts = {removeAllProducts}
-								 />
+									getCart={getCart}
+									removeAllProducts={removeAllProducts}
+								/>
 							</Elements>
 						</Route>
 						<Route path="/">

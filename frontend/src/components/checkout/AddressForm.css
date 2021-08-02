@@ -1,3 +1,43 @@
 .AddressForm {
   border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2%;
+}
+.AddressForm input {
+  width: 60%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.AddressForm select {
+  width: 60%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.AddressForm label {
+  width: 30%;
+}
+.AddressForm button {
+  background-color: white;
+  margin-top: 2.5vh;
+  margin-left: 0px;
+  margin-right: 0px;
+  border: none;
+  width: 7.5vw;
+  height: 3vh;
+  transition-duration: 0.6s;
+  font-family: 'Cardo', serif;
+  font-weight: 550;
+  font-size: 0.7vw;
+  color: black;
+}
+.AddressForm button:hover {
+  background-color:#33415b;
+  cursor: pointer;
+  color: white;
 }
