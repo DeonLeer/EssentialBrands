@@ -81,7 +81,7 @@ export default function Terpene(props) {
 		<div className="terpenes">
 			<div
 				className="graphics"
-				onMouseEnter={() => setIsShown(true)}
+				
 				onMouseLeave={() => setIsShown(false)}
 			>
 				{isShown ? (
@@ -114,7 +114,10 @@ export default function Terpene(props) {
 					/>
 				) : (
 					<div style={{ height: "100%" }}>
-						<img className="terpene-bottle" src={terpBottle} alt="bottle" />
+						<img
+						 onMouseEnter={() => setIsShown(true)}
+						 className="terpene-bottle" src={terpBottle} 
+						 alt="bottle" />
 						<div className="image-text">{props.terpene.name}</div>
 					</div>
 				)}
