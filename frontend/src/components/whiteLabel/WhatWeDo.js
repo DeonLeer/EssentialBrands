@@ -34,6 +34,7 @@ export default function WhatWeDo(props) {
 				<li>design, manufacturing and procurement of hardware and packaging</li>
 				<li>mixing, filling, packaging, and labelling</li>
 				<li>fulfilment</li>
+				<li>GC Potency Testing</li>
 			</ul>
 			<p>
 				Each of the above are critical to successful branding, bringing product
@@ -58,16 +59,16 @@ export default function WhatWeDo(props) {
 				</div>
 				<div className="bottom-row">
 					<div>
-						<img src={image4} alt="Laser Etching" />
-						<figcaption>Laser Etching</figcaption>
+						<img src={image4} alt="OEM Assembly" />
+						<figcaption>OEM Assembly</figcaption>
 					</div>
 					<div>
 						<img src={image5} alt="Packaging Design" />
 						<figcaption>Packaging Design</figcaption>
 					</div>
 					<div>
-						<img src={image6} alt="OEM Assembly" />
-						<figcaption>OEM Assembly</figcaption>
+						<img src={image6} alt="Laser Etching" />
+						<figcaption>Laser Etching</figcaption>
 					</div>
 				</div>
 			</div>

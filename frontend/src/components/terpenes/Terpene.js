@@ -88,7 +88,7 @@ export default function Terpene(props) {
 					<PieChart
 						data={pieChartData(props.terpene)}
 						className="pie-chart"
-						label={({ dataEntry }) => `${dataEntry.name}\n ${dataEntry.value}%`}
+						label={({ dataEntry }) => `${dataEntry.title}\n ${dataEntry.value}%`}
 						labelStyle={(index) => ({
 							fontSize: "3.5px",
 							fontFamily: "sans-serif",
@@ -133,6 +133,7 @@ export default function Terpene(props) {
           </a>
         </button>
 				<div className="name-and-price">
+					<p className="terpene-type">{props.terpene.type}</p>
 					<p className="terpene-name">{props.terpene.name}</p>
 
 					<p className="terpene-price">${props.terpene[size]} per</p>

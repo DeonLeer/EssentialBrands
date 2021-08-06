@@ -6,6 +6,11 @@
   width: 30vw;
   height: 100%;
 }
+.terpene-type {
+  margin: 0;
+  font-size: large;
+  font-weight: 700;
+}
 .terpene-name {
   margin: 0;
   font-size: large;

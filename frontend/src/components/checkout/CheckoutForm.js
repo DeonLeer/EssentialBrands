@@ -63,10 +63,7 @@ export default function CheckoutForm(props) {
 			<h1 style={{ textAlign: "center", width: "100vw" }}>Checkout</h1>
 			<div className="checkoutItems">
 				<table
-					width="100%"
-					cellSpacing={0}
-					cellPadding={0}
-					style={{ textAlign: "left", marginLeft: "2%" }}
+					className="checkoutTable"
 				>
 					<thead>
 						<tr>
@@ -74,7 +71,6 @@ export default function CheckoutForm(props) {
 							<th>Price</th>
 							<th>Quantity</th>
 							<th>Subtotal</th>
-							<th></th>
 						</tr>
 					</thead>
 					<tbody>

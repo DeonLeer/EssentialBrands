@@ -1,0 +1,30 @@
+.MixCalculator {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.Calculator {
+  width: 46%;
+  border: 1px solid black;
+  padding: 2%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+}
+.Inputs {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.Results {
+  width: 50%;
+}
+.Calculator input {
+  width: 10%;
+}
+.CalcButton {
+  margin-top: 2%;
+  width: 30%;
+}

@@ -25,6 +25,8 @@ import WhiteLabeling from "./components/whiteLabel/WhiteLabeling";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import MoreTerpenes from "./components/terpenes/MoreTerpenes";
+import Calculator from "./components/terpenes/Calculator";
 require("dotenv").config();
 const stripe = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 function App() {
@@ -112,8 +114,13 @@ function App() {
 								<Link to="/products/pawsitive">Pawsitive</Link>
 							</div>
 						</Link>
-						<Link to="/terpenes">
+						<Link to="/terpenes" className="link">
 							<button className="nav-button">TERPENES</button>
+							<div className="dropdown-content">
+								<Link to="/terpenes">Trending Terpenes</Link>
+								<Link to="/terpenes/more">More Terpenes</Link>
+								<Link to="/terpenes/calculator">Mixing Calculator</Link>
+							</div>
 						</Link>
 						<Link to="/about" className="link">
 							<button className="nav-button">ABOUT</button>
@@ -172,6 +179,12 @@ function App() {
 						</Route>
 						<Route path="/whitelabeling/whatwedo">
 							<WhatWeDo />
+						</Route>
+						<Route path="/terpenes/more">
+							<MoreTerpenes />
+						</Route>
+						<Route path="/terpenes/calculator">
+							<Calculator />
 						</Route>
 						<Route path="/about">
 							<About />
