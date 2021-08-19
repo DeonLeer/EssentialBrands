@@ -1,31 +1,131 @@
+@media only screen and (max-width: 768px) {
+	.WhiteLabeling {
+		text-align: center;
+		margin: 2%;
+		font-size: large;
+	}
+	.text-image1 {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		align-items: center;
+	}
+	.text-image2 {
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: left;
+		align-items: center;
+	}
+	.WLImage {
+		width: 300px;
+		height: 200px;
+	}
+	.text-image img {
+		margin: 1%;
+	}
+	.text-image p {
+		margin: 1%;
+	}
+	.WLButton {
+		background-color: white;
+		margin-bottom: 2%;
+		border: none;
+		width: 200px;
+		height: 60px;
+		transition-duration: 0.6s;
+		font-family: "Cardo", serif;
+		font-weight: 550;
+		font-size: large;
+		color: black;
+	}
+	.WLButton:hover {
+		background-color: #33415b;
+		cursor: pointer;
+		color: white;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 .WhiteLabeling {
-	text-align: center;
-	margin: 2%;
+		text-align: center;
+		margin: 2%;
+		font-size: large;
+	}
+	.text-image1 {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		align-items: center;
+	}
+	.text-image2 {
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: left;
+		align-items: center;
+	}
+	.WLImage {
+		width: 500px;
+		height: 300px;
+	}
+	.text-image img {
+		margin: 1%;
+	}
+	.text-image p {
+		margin: 1%;
+	}
+	.WLButton {
+		background-color: white;
+		margin-bottom: 2%;
+		border: none;
+		width: 200px;
+		height: 60px;
+		transition-duration: 0.6s;
+		font-family: "Cardo", serif;
+		font-weight: 550;
+		font-size: large;
+		color: black;
+	}
+	.WLButton:hover {
+		background-color: #33415b;
+		cursor: pointer;
+		color: white;
+	}
 }
-.text-image {
-	display: flex;
-	text-align: left;
-}
-.text-image img {
-  margin: 1%;
-}
-.text-image p {
-  margin: 1%;
-}
-.WLButton {
-	background-color: white;
-  margin-bottom: 2%;
-	border: none;
-	width: 10vw;
-	height: 3vh;
-	transition-duration: 0.6s;
-	font-family: "Cardo", serif;
-	font-weight: 550;
-	font-size: 0.7vw;
-	color: black;
-}
-.WLButton:hover {
-	background-color: #33415b;
-	cursor: pointer;
-	color: white;
+@media only screen and (min-width: 1024px) {
+	.WhiteLabeling {
+		text-align: center;
+		margin: 2%;
+		font-size: large;
+	}
+	.text-image1, .text-image2 {
+		display: flex;
+		text-align: left;
+		align-items: center;
+	}
+	.WLImage {
+		width: 500px;
+		height: 400px;
+	}
+	.text-image img {
+		margin: 1%;
+	}
+	.text-image p {
+		margin: 1%;
+	}
+	.WLButton {
+		background-color: white;
+		margin-bottom: 2%;
+		border: none;
+		width: 200px;
+		height: 60px;
+		transition-duration: 0.6s;
+		font-family: "Cardo", serif;
+		font-weight: 550;
+		font-size: large;
+		color: black;
+	}
+	.WLButton:hover {
+		background-color: #33415b;
+		cursor: pointer;
+		color: white;
+	}
 }

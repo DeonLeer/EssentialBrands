@@ -1,18 +1,62 @@
-.TerpenesList {
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+@media only screen and (max-width: 768px) {
+	.TerpenesList {
+	margin-top: 5%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .TerpeneCard {
-  width: 30vw;
-  height: 48vh;
-  margin-bottom: 2%;
+	width: 90vw;
+	height: 420px;
+	margin-bottom: 2%;
 }
 .TerpenesTitle {
-  text-align: center;
+	text-align: center;
 }
 .type-checkboxes {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.TerpenesList {
+	margin-top: 5%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.TerpeneCard {
+	width: 34vw;
+	height: 500px;
+	margin-bottom: 2%;
+}
+.TerpenesTitle {
+	text-align: center;
+}
+.type-checkboxes {
+	display: flex;
+	justify-content: center;
+}
+}
+@media only screen and (min-width: 1024px) {
+	.TerpenesList {
+	margin-top: 5%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.TerpeneCard {
+	width: 30%;
+	height: 600px;
+	margin-bottom: 2%;
+}
+.TerpenesTitle {
+	text-align: center;
+}
+.type-checkboxes {
+	display: flex;
+	justify-content: center;
+}
+}
+
+

@@ -1,63 +1,233 @@
-.CBDLearn {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+@media only screen and (max-width: 768px) {
+	.CBDLearn {
+		width: 100vw;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.HeaderContainer {
+		max-width: 768px;
+		max-height: 200px;
+		display: flex;
+		justify-content: flex-end;
+		overflow: hidden;
+	}
+	.CBDContent {
+		width: 100vw;
+	}
+	.CBDHeader {
+		width: 1920px;
+		height: 300px;
+	}
+	.MainContent {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 3%;
+		justify-content: space-evenly;
+	}
+	.MainImage {
+		width: 500px;
+	}
+
+	.Spectrums {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    align-items: center;
+		text-align: left;
+	}
+	.Spectrum {
+		display: flex;
+    flex-wrap: wrap;
+		width: 80vw;
+	}
+	.Spectrum h2 {
+		text-align: center;
+		font-size: large;
+    width: 80vw;
+	}
+
+	.CBDLearnText {
+		margin-left: 1%;
+		font-size: 130%;
+	}
+
+	.CBDImageContainer {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.ProsConsContainer {
+		display: flex;
+		justify-content: space-evenly;
+		margin-bottom: 5%;
+	}
+	.ProsCons {
+		width: 30%;
+		display: flex;
+	}
+	.Pros {
+		width: 50%;
+	}
+	.Cons {
+		width: 50%;
+	}
+	.ProsCons li {
+		text-align: left;
+	}
 }
-.Spectrums {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: left;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.CBDLearn {
+		width: 768px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.HeaderContainer {
+		max-width: 1024px;
+		max-height: 200px;
+		display: flex;
+		justify-content: flex-end;
+		overflow: hidden;
+	}
+	.CBDContent {
+		width: 768px;
+	}
+	.CBDHeader {
+		width: 1920px;
+		height: 300px;
+	}
+	.MainContent {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 3%;
+		justify-content: space-evenly;
+	}
+	.MainImage {
+		width: 500px;
+	}
+
+	.Spectrums {
+		display: flex;
+		justify-content: space-evenly;
+		text-align: left;
+	}
+	.ImgAndText {
+		height: 250px;
+	}
+	.Spectrums h2 {
+		text-align: center;
+	}
+
+	.CBDLearnText {
+		margin-left: 1%;
+		font-size: 130%;
+	}
+	.Spectrum {
+		width: 25%;
+		height: 500px;
+	}
+	.CBDImageContainer {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.ProsConsContainer {
+		display: flex;
+		justify-content: space-evenly;
+		margin-bottom: 5%;
+	}
+	.ProsCons {
+		width: 30%;
+		display: flex;
+	}
+	.Pros {
+		width: 50%;
+	}
+	.Cons {
+		width: 50%;
+	}
+	.ProsCons li {
+		text-align: left;
+	}
 }
-.Spectrums h2 {
-  text-align: center;
-}
-.HeaderContainer {
-  width: 98vw;
-  height: 20vh;
-  overflow: hidden;
-  margin-top: 2%;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-}
-.CBDHeader {
-  width: 100%;
-  margin-top: -10%;
-}
-.MainContent {
-  display: flex;
-  align-items: center;
-  margin: 3%;
-  justify-content: space-evenly;
-}
-.CBDLearnText {
-  margin-left: 1%;
-  font-size: 130%;
-}
-.Spectrum {
-  width: 20vw;
-}
-.CBDImageContainer {
-  height: 20vh;
-  overflow: hidden;
-}
-.CBDImage {
-  width: 50vw;
-}
-.ProsConsContainer {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 5%;
-}
-.ProsCons {
-  width: 20vw;
-  display: flex;
-}
-.Pros {
-  width: 50%
-}
-.Cons {
-  width: 50%
-}
-.ProsCons li {
-  text-align: left;
+@media only screen and (min-width: 1024px) {
+	.CBDLearn {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.HeaderContainer {
+		max-width: 1920px;
+		max-height: 200px;
+		display: flex;
+		justify-content: flex-end;
+		overflow: hidden;
+	}
+	.CBDContent {
+		width: 1000px;
+	}
+	.CBDHeader {
+		width: 1920px;
+		height: 300px;
+	}
+	.MainContent {
+		display: flex;
+		align-items: center;
+		margin: 3%;
+		justify-content: space-evenly;
+	}
+	.MainImage {
+		width: 500px;
+	}
+
+	.Spectrums {
+		display: flex;
+		justify-content: space-evenly;
+		text-align: left;
+	}
+	.ImgAndText {
+		height: 250px;
+	}
+	.Spectrums h2 {
+		text-align: center;
+	}
+
+	.CBDLearnText {
+		margin-left: 1%;
+		font-size: 130%;
+	}
+	.Spectrum {
+		width: 25%;
+		height: 500px;
+	}
+	.CBDImageContainer {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.ProsConsContainer {
+		display: flex;
+		justify-content: space-evenly;
+		margin-bottom: 5%;
+	}
+	.ProsCons {
+		width: 30%;
+		display: flex;
+	}
+	.Pros {
+		width: 50%;
+	}
+	.Cons {
+		width: 50%;
+	}
+	.ProsCons li {
+		text-align: left;
+	}
 }

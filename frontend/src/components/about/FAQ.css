@@ -1,0 +1,39 @@
+@media only screen and (max-width: 1024px) {
+	.FAQ {
+		margin-top: 4%;
+		display: flex;
+		align-items: center;
+	}
+	.LeftSide {
+		display: flex;
+		width: 40%;
+		justify-content: center;
+	}
+	.LeftSide h1 {
+		width: 10%;
+		text-align: center;
+	}
+	.RightSide {
+		width: 60%;
+    margin-right: 15px;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.FAQ {
+		margin-top: 4%;
+		display: flex;
+		align-items: center;
+	}
+	.LeftSide {
+		display: flex;
+		width: 35%;
+		justify-content: center;
+	}
+	.LeftSide h1 {
+		width: 10%;
+		text-align: center;
+	}
+	.RightSide {
+		width: 65%;
+	}
+}

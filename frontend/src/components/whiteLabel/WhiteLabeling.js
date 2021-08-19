@@ -10,9 +10,9 @@ export default function WhiteLabeling(props) {
 			<h1>What is White Labeling?</h1>
       <button className="WLButton"><Link to="/whitelabeling/whatwedo" >What We Can Do For You</Link></button>
 			<div className="WhiteLabelContent">
-				<div className="text-image">
+				<div className="text-image1">
 					{" "}
-					<img className="WLImage1" src={image1} alt="wl" />
+					<img className="WLImage" src={image1} alt="wl" />
 					<div className="text-box">
 						<p>
 							White labeling is a common business practice that involves one
@@ -48,7 +48,7 @@ export default function WhiteLabeling(props) {
 						</p>
 					</div>
 				</div>
-				<div className="text-image">
+				<div className="text-image2">
 					<div className="text-box">
 						<p>
 							Companies without ample resources take a huge risk by investing in
@@ -85,7 +85,7 @@ export default function WhiteLabeling(props) {
 						</p>{" "}
 					</div>
 
-					<img src={image2} alt="wl" />
+					<img className="WLImage" src={image2} alt="wl" />
 				</div>
 			</div>
 		</div>

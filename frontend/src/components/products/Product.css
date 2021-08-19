@@ -1,74 +1,217 @@
-.Product {
-  display: flex;
-  flex-direction: column;
-  width: 15vw;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 25px;
-  box-shadow: 4px 4px lightgray;
+@media only screen and (max-width: 768px) {
+	.Product {
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		height: 440px;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 25px;
+		box-shadow: 4px 4px lightgray;
+	}
+
+	.productImage {
+		max-width: 200px;
+		max-height: 225px;
+	}
+	.product-price {
+		font-weight: 700;
+		font-size: 20px;
+		color: #4f7dae;
+	}
+	.actions {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.ARButtons {
+		display: flex;
+		flex-direction: column;
+		font-size: 25px;
+	}
+	.ARButton {
+		font-size: 25px;
+		border: none;
+		background-color: white;
+	}
+	.ARButton:hover {
+		cursor: pointer;
+	}
+	.productButton {
+		background-color: white;
+		border: none;
+		width: 120px;
+		height: 35px;
+		transition-duration: 0.6s;
+		font-family: "Cardo", serif;
+		font-weight: 400;
+		font-size: 14px;
+		color: black;
+		margin: 4px;
+	}
+	.productButton:hover {
+		background-color: #33415b;
+		cursor: pointer;
+		color: white;
+	}
+	.ProductModal {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: white;
+		margin: 2%;
+		width: 60%;
+	}
 }
-.product-image {
-  height: 7.5vw;
-  margin: 7.5px;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.Product {
+		display: flex;
+		flex-direction: column;
+		width: 310px;
+		height: 420px;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 25px;
+		box-shadow: 4px 4px lightgray;
+	}
+
+	.productImage {
+		max-width: 300px;
+		max-height: 225px;
+	}
+	.product-price {
+		font-weight: 700;
+		font-size: 20px;
+		color: #4f7dae;
+	}
+	.actions {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.ARButtons {
+		font-size: 150%;
+	}
+	.ARButton {
+		font-size: 100%;
+		border: none;
+		background-color: white;
+	}
+	.ARButton:hover {
+		cursor: pointer;
+	}
+	.productButton {
+		background-color: white;
+		border: none;
+		width: 80px;
+		height: 20px;
+		transition-duration: 0.6s;
+		font-family: "Cardo", serif;
+		font-weight: 400;
+		font-size: 10px;
+		color: black;
+		margin: 4px;
+	}
+	.productButton:hover {
+		background-color: #33415b;
+		cursor: pointer;
+		color: white;
+	}
+	.ProductModal {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: white;
+		margin: 2%;
+		width: 60%;
+	}
 }
-.product-name {
-  font-weight: 700;
-  font-size: 1.2vw;
-  margin: 2px;
-}
-.the-percent {
-  margin-top: 10px;
-}
-.product-price {
-  font-weight: 700;
-  font-size: 1.2vw;
-  color: #4F7DAE;
-}
-.productButton {
-  background-color: white;
-  border: none;
-  width: 5vw;
-  height: 5vh;
-  transition-duration: 0.6s;
-  font-family: 'Cardo', serif;
-  font-weight: 400;
-  font-size: 0.8vw;
-  color: black;
-  margin: 4px;
-}
-.productButton:hover {
-  background-color:#33415b;
-  cursor: pointer;
-  color: white;
-}
-.dialogues {
-  display: flex;
-  flex-direction: row;
-}
-.actions {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-.addToCart {
-  border-top: solid rgb(10, 10, 70);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.ARButtons {
-  font-size: 150%;
-}
-.ARButton {
-  font-size: 100%;
-  border: none;
-  background-color: white;
-}
-.ARButton:hover {
-  cursor: pointer;
+@media only screen and (min-width: 1024px) {
+	.Product {
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+		height: 500px;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 25px;
+		box-shadow: 4px 4px lightgray;
+	}
+	.product-name {
+		width: 100%;
+		height: 12.5%;
+		font-weight: 700;
+		font-size: large;
+		margin: 2px;
+	}
+	.product-image {
+		width: 100%;
+		height: 60%;
+	}
+	.productImage {
+		max-width: 90%;
+		max-height: 95%;
+	}
+	.product-price {
+		font-weight: 700;
+		font-size: large;
+		color: #4f7dae;
+	}
+	.actions {
+		width: 100%;
+		height: 16%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.ARButtons {
+		font-size: 150%;
+	}
+	.ARButton {
+		font-size: 100%;
+		border: none;
+		background-color: white;
+	}
+	.ARButton:hover {
+		cursor: pointer;
+	}
+	.productButton {
+		background-color: white;
+		border: none;
+		width: 50px;
+		height: 50px;
+		transition-duration: 0.6s;
+		font-family: "Cardo", serif;
+		font-weight: 400;
+		font-size: 14px;
+		color: black;
+		margin: 4px;
+	}
+	.productButton:hover {
+		background-color: #33415b;
+		cursor: pointer;
+		color: white;
+	}
+	.ProductModal {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: white;
+		margin: 2%;
+		width: 60%;
+	}
 }

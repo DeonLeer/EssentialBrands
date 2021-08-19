@@ -7,7 +7,7 @@ export default function CBD(props) {
 	return (
 		<div className="CBDLearn">
 			<div className="HeaderContainer">
-				<img className="CBDHeader" src={CBDHeader} alt="cannabis plant" />
+				<img className="full-width" src={CBDHeader} alt="cannabis plant" />
 			</div>
 			<h1>What Is CBD?</h1>
 			<div className="CBDContent">
@@ -104,57 +104,62 @@ export default function CBD(props) {
 						</p>
 					</div>
 				</div>
-				<div className="ProsConsContainer">
-					<div className="ProsCons">
-						<div className="Pros">
-							<h2>Pros</h2>
-							<ul>
-								<li>Offers full benefits of the Entourage Effect</li>
-								<li>Least processed form of CBD</li>
-								<li>Contains cannabinoids, terpenes and flavonoids</li>
-							</ul>
+				{props.width > 768 ? 
+					<div className="ProsConsContainer">
+						<div className="ProsCons">
+							<div className="Pros">
+								<h2>Pros</h2>
+								<ul>
+									<li>Offers full benefits of the Entourage Effect</li>
+									<li>Least processed form of CBD</li>
+									<li>Contains cannabinoids, terpenes and flavonoids</li>
+								</ul>
+							</div>
+							<div className="Cons">
+								<h2>Cons</h2>
+								<ul>
+									<li>Contains small amounts of THC</li>
+								</ul>
+							</div>
 						</div>
-						<div className="Cons">
-							<h2>Cons</h2>
-							<ul>
-								<li>Contains small amounts of THC</li>
-							</ul>
+						<div className="ProsCons">
+							<div className="Pros">
+								<h2>Pros</h2>
+								<ul>
+									<li> Offers the full benefits of the entourage effect</li>
+									<li>Less processed than isolate</li>
+									<li>No risk of psychoactive effects</li>
+								</ul>
+							</div>
+							<div className="Cons">
+								<h2>Cons</h2>
+								<ul>
+									<li>Less Researched</li>
+									<li>Less availability</li>
+								</ul>
+							</div>
+						</div>
+						<div className="ProsCons">
+							<div className="Pros">
+								<h2>Pros</h2>{" "}
+								<ul>
+									<li>Purest form of CBD</li>
+									<li>Highly Versatile</li>
+									<li>Oderless and flavorless</li>
+								</ul>
+							</div>
+							<div className="Cons">
+								<h2>Cons</h2>{" "}
+								<ul>
+									<li>No Entourage Effect benefits</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-					<div className="ProsCons">
-						<div className="Pros">
-							<h2>Pros</h2>
-							<ul>
-								<li> Offers the full benefits of the entourage effect</li>
-								<li>Less processed than isolate</li>
-								<li>No risk of psychoactive effects</li>
-							</ul>
-						</div>
-						<div className="Cons">
-							<h2>Cons</h2>
-							<ul>
-								<li>Less Researched</li>
-								<li>Less availability</li>
-							</ul>
-						</div>
-					</div>
-					<div className="ProsCons">
-						<div className="Pros">
-							<h2>Pros</h2>{" "}
-							<ul>
-								<li>Purest form of CBD</li>
-								<li>Highly Versatile</li>
-								<li>Oderless and flavorless</li>
-							</ul>
-						</div>
-						<div className="Cons">
-							<h2>Cons</h2>{" "}
-							<ul>
-								<li>No Entourage Effect benefits</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+					:
+					null
+				}
+
 			</div>
 		</div>
 	);

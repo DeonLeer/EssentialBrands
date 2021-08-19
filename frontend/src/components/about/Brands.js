@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import FG_Logo from "../../images/ForbiddenGardenLogo.jpg";
+import FG_Logo from "../../images/FGGraphicLogo.png";
 import HP_Logo from "../../images/highProfile.jpeg";
 import PO_Logo from "../../images/PureOrganticLogo.png";
-import PP_Logo from "../../images/PP_Header.png";
+import PP_Logo from "../../images/pawsitive_logo.png";
 import TE_Logo from "../../images/terpenexpress/default.png";
 import FG_Header from "../../images/FG_Header.png";
 import PO_Header from "../../images/PO_Header.png";
 import TE_Header from "../../images/TPXHeader.png";
 import HP_Header from "../../images/HPHeader.png";
+import PP_Header from "../../images/PP_Header.png";
 
 import "./Brands.css";
 const brands = {
@@ -44,11 +45,11 @@ export default function Brands(props) {
 	return (
 		<div className="OurBrands">
 			<h1>Our Brands</h1>
-			<p>
-				Essential Brands is an international enterprise looking to become a
-				leader and a jack of all trades in the cannaboid industry. Because of
-				this, our product line is split into multiple brands that each serve
-				their own purpose.
+			<p className="GeneralText">
+				Essential Brands International: a multi brand portfolio of refined
+				cannabinoid consumer products, supplier of organic terpenes blended to
+				create custom cannabis strain profiles and supplier of branded and
+				custom hardware.
 			</p>
 			<div className="BrandButtons">
 				<button className="BrandButton" onClick={() => setVisibleBrand("FG")}>
@@ -64,7 +65,7 @@ export default function Brands(props) {
 					<img className="BrandButtonImage" src={HP_Header} alt="logo" />
 				</button>
 				<button className="BrandButton" onClick={() => setVisibleBrand("PP")}>
-					<img className="BrandButtonImage" src={PP_Logo} alt="logo" />
+					<img className="BrandButtonImage" src={PP_Header} alt="logo" />
 				</button>
 			</div>
 			<div className="Brands">

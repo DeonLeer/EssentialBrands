@@ -55,7 +55,7 @@ export default function Products(props) {
         </Route>
         <Route path={`${path}/pureorgantic`}>
           <div className="Products">
-            <img className="brand-headerPO" src={po_header} alt="pure organtic"/>
+            <img className="brand-header" src={po_header} alt="pure organtic"/>
             {props.products.products.map(product => {
               if (product.brandid === 2){
                 return(
@@ -89,24 +89,4 @@ export default function Products(props) {
   )
 }
 
-
-// //   const [state, setState] = useState({
-//   1: true,
-//   2: true, 
-//   3: true
-// })
-// const filterToggle = function(brand) {
-//   if (state[brand]) {
-//     setState(prev => ({
-//       ...prev,
-//       [brand]: false
-//     }))
-//     console.log(state)
-//   } else {
-//     setState(prev => ({
-//       ...prev,
-//       [brand]: true
-//     }))
-//     console.log(state)
-//   }
 // }

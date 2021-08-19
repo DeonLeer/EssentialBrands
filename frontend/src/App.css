@@ -1,104 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
-.App {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Cardo', serif;
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
+@media only screen and (max-width: 768px) {
+	.App {
+		font-family: "Cardo", serif;
+	}
+	.EssentialBrandsLogo {
+		width: 50%;
+	}
+	.content {
+		margin-top: 74px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
-.Header {
-  display: flex;
-  justify-content: space-between;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.App {
+		font-family: "Cardo", serif;
+	}
+	.EssentialBrandsLogo {
+		width: 50%;
+	}
+	.content {
+		margin-top: 74px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
-.Logos {
-  margin-left: 0.75vw;
-  display: flex;
-}
-.EssentialBrandsLogo {
-  width: 10vw;
-  margin-top: 0.75vw;
-}
-.OtherLogos {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 1.25VW;
-  width: 20vw;
-  height: 4vw;
-}
-.ForbiddenGardenLogo {
-  width: 25%;
-  background-color: rgb(107, 106, 106);
-}
-.PureOrganticLogo {
-  width: 25%;
-}
-.HighProfileLogo {
-  width: 25%;
-  height: 4vw;
-}
-.TerpeneXpressLogo {
-  width: 24%;
-  height: 4vw;
-}
-.navbar {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-.cart {
-  width: 1.4vw;
-  margin-right: 2vw;
-  margin-left: 1vw;
-}
+@media only screen and (min-width: 1024px) {
+	.App {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: "Cardo", serif;
+	}
+	.Header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		background-color: white;
+	}
+	.Logos {
+		margin-left: 0.75%;
+		display: flex;
+	}
+	.EssentialBrandsLogo {
+		width: 400px;
+		height: 90px;
+		margin-top: 20px;
+	}
+	.OtherLogos {
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+		margin-left: 20px;
+		width: 600px;
+		height: 120px;
+	}
+	.ForbiddenGardenLogo {
+		width: 25%;
+		height: 100%;
+		background-color: rgb(107, 106, 106);
+	}
+	.PureOrganticLogo {
+		width: 25%;
+		height: 100%;
+	}
+	.HighProfileLogo {
+		width: 25%;
+		height: 100%;
+	}
+	.TerpeneXpressLogo {
+		width: 24%;
+		height: 100%;
+	}
+	.navbar {
+		top: 0;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		background-color: white;
+		z-index: 100;
+		width: 100%;
+		height: 65px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		box-shadow: 5px 5px 5px #888888;
+	}
+	.cart {
+		width: 1.4vw;
+		margin-right: 2vw;
+		margin-left: 1vw;
+	}
+	.nav-button {
+		background-color: white;
+		border: none;
+		width: 126.75px;
+		height: 25px;
+		transition-duration: 0.6s;
+		font-family: "Cardo", serif;
+		font-weight: 700;
+		font-size: 12px;
+		color: black;
+	}
+	.nav-button:hover {
+		background-color: #33415b;
+		cursor: pointer;
+		color: white;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f1f1f1;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {
+		background-color: #33415b;
+		transition-duration: 0.6s;
+		cursor: pointer;
+		color: white;
+	}
 
-.nav-button {
-  background-color: white;
-  margin-top: 2.5vh;
-  margin-left: 0px;
-  margin-right: 0px;
-  border: none;
-  width: 7.5vw;
-  height: 3vh;
-  transition-duration: 0.6s;
-  font-family: 'Cardo', serif;
-  font-weight: 550;
-  font-size: 0.7vw;
-  color: black;
-}
-.nav-button:hover {
-  background-color:#33415b;
-  cursor: pointer;
-  color: white;
-}
-.content {
-  background-color: #fff
-}
-.link {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  
-}
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {  background-color:#33415b;
-  transition-duration: 0.6s;
-  cursor: pointer;
-  color: white;}
+	/* Show the dropdown menu on hover */
+	.link:hover .dropdown-content {
+		display: block;
+	}
 
-/* Show the dropdown menu on hover */
-.link:hover .dropdown-content {display: block;}
+	/* Change the background color of the dropdown button when the dropdown content is shown */
+	.link:hover .dropbtn {
+		background-color: #3e8e41;
+	}
+	.content {
+		width: 1000px;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.link:hover .dropbtn {background-color: #3e8e41;}
-
+	.bottom {
+		width: 100%;
+		background-color: #33415b;
+		color: white;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-evenly;
+	}
+	.bottom b {
+		font-size: 24px;
+	}
+	.bottom a {
+		text-decoration: none;
+		color: white;
+	}
+}

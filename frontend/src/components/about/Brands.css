@@ -1,41 +1,108 @@
-.OurBrands {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: 15%;
-  margin-right: 15%;
+@media only screen and (max-width: 768px) {
+	.OurBrands {
+		margin-left: 8px;
+		margin-right: 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.Brand {
+		display: flex;
+		flex-direction: column;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	.BrandContent {
+		display: flex;
+		align-items: center;
+	}
+	#FGLogo {
+		background-color: black;
+	}
+	.Logo {
+		width: 35%;
+		margin: 2%;
+	}
+	.BrandButtons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 80%;
+	}
+	.BrandButton {
+		height: 40px;
+		width: 250px;
+		border: none;
+		background-color: white;
+		padding: 0;
+	}
+	.BrandButton:hover {
+		cursor: pointer;
+	}
+	.BrandButtonImage {
+		width: 100%;
+		height: 100%;
+	}
+	.GeneralText {
+		font-size: 20px;
+	}
+	.BrandContent {
+		font-size: 17px;
+		font-weight: 700;
+	}
 }
-.Brand {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.BrandContent {
-  display: flex;
-  align-items: center;
-}
-#FGLogo {
-  background-color: black;
-}
-.Logo {
-  width: 25%;
-  margin: 2%;
-}
-.BrandButtons {
-  display: flex;
-  width: 100%;
-}
-.BrandButton {
-  width: 100%;
-  border: none;
-  background-color: white;;
-}
-.BrandButton:hover {
-  cursor: pointer;
-}
-.BrandButtonImage {
-  width: 100%;
+@media only screen and (min-width: 768px) {
+	.OurBrands {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	.Brand {
+		display: flex;
+		flex-direction: column;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	.BrandContent {
+		display: flex;
+		align-items: center;
+	}
+	#FGLogo {
+		background-color: black;
+	}
+	.Logo {
+		width: 35%;
+		margin: 2%;
+	}
+	.BrandButtons {
+		display: flex;
+		width: 100%;
+	}
+	.BrandButton {
+		height: 40px;
+		width: 100%;
+		border: none;
+		background-color: white;
+		padding: 0;
+	}
+	.BrandButton:hover {
+		cursor: pointer;
+	}
+	.BrandButtonImage {
+		width: 100%;
+		height: 100%;
+	}
+	.GeneralText {
+		font-size: 20px;
+	}
+	.BrandContent {
+		font-size: 17px;
+		font-weight: 700;
+	}
 }

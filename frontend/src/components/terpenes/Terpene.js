@@ -53,9 +53,9 @@ const colors = [
 export default function Terpene(props) {
 	let history = useHistory();
 
-  const [size, setSize] = useState('fiveg');
+	const [size, setSize] = useState("fiveg");
 
-  const [amount, setAmount] = useState(0)
+	const [amount, setAmount] = useState(0);
 
 	const [isShown, setIsShown] = useState(false);
 
@@ -79,98 +79,120 @@ export default function Terpene(props) {
 	};
 	return (
 		<div className="terpenes">
-			<div
-				className="graphics"
-				
-				onMouseLeave={() => setIsShown(false)}
-			>
+			<div className="graphics" onMouseLeave={() => setIsShown(false)}>
 				{isShown ? (
-					<PieChart
-						data={pieChartData(props.terpene)}
-						className="pie-chart"
-						label={({ dataEntry }) => `${dataEntry.title}\n ${dataEntry.value}%`}
-						labelStyle={(index) => ({
-							fontSize: "3.5px",
-							fontFamily: "sans-serif",
-						})}
-						labelPosition={116}
-						radius={22}
-						animate
-						viewBoxSize={[100, 75]}
-						center={[50, 40]}
-						segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
-						segmentsShift={(index) => (index === selected ? 2 : 0)}
-						onMouseOver={(_, index) => {
-							setSelected(index);
-						}}
-						onMouseOut={() => {
-							setSelected(undefined);
-						}}
-						onClick={(event, index) => {
-							history.push(
-								`/learn/terpenes/${pieChartData(props.terpene)[index].name}`,
-							);
-						}}
-					/>
+					<>
+						<PieChart
+							data={pieChartData(props.terpene)}
+							className="pie-chart"
+							label={({ dataEntry }) =>
+								`${dataEntry.title}\n ${dataEntry.value}%`
+							}
+							labelStyle={(index) => ({
+								fontSize: "3.5px",
+								fontFamily: "sans-serif",
+							})}
+							labelPosition={116}
+							radius={22}
+							animate
+							viewBoxSize={[100, 75]}
+							center={[50, 40]}
+							segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
+							segmentsShift={(index) => (index === selected ? 2 : 0)}
+							onMouseOver={(_, index) => {
+								setSelected(index);
+							}}
+							onMouseOut={() => {
+								setSelected(undefined);
+							}}
+							onClick={(event, index) => {
+								history.push(
+									`/learn/terpenes/${pieChartData(props.terpene)[index].name}`,
+								);
+							}}
+						/>
+						<button
+							style={{ position: "relative", top: '-20%', left: '8%' }}
+							className="terpeneButton"
+							onClick={() => setIsShown(false)}
+						>
+							Close
+						</button>
+					</>
 				) : (
 					<div style={{ height: "100%" }}>
 						<img
-						 onMouseEnter={() => setIsShown(true)}
-						 className="terpene-bottle" src={terpBottle} 
-						 alt="bottle" />
+							onClick={() => setIsShown(true)}
+							onMouseEnter={() => setIsShown(true)}
+							className="terpene-bottle"
+							src={terpBottle}
+							alt="bottle"
+						/>
 						<div className="image-text">{props.terpene.name}</div>
 					</div>
 				)}
 			</div>
 			<div className="text-under-graphics">
-        <button className="leaflyButton">
-          <a
-						href={props.terpene.link}
-						style={{ textDecoration: "none", color: "black" }}
-						rel="noopener noreferrer"
-						target="_blank">
-            Read More on Leafly
-          </a>
-        </button>
-				<div className="name-and-price">
-					<p className="terpene-type">{props.terpene.type}</p>
+				<div className="under-image-box">
+					<button className="leaflyButton">
+						<a
+							href={props.terpene.link}
+							style={{ textDecoration: "none", color: "black" }}
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							Read More on Leafly
+						</a>
+					</button>
+				</div>
+				<div className="under-image-box">
 					<p className="terpene-name">{props.terpene.name}</p>
-
+					<p className="terpene-type">{props.terpene.type}</p>
+				</div>
+				<div className="under-image-box">
+					{" "}
 					<p className="terpene-price">${props.terpene[size]} per</p>
-          <select id="size" name="size" onChange={(event)=>setSize(event.target.value)}>
-            <option value='fiveg'>Five Grams</option>
-            <option value='twentyg'>Twenty Grams</option>
-            <option value='fiftyg'>Fifty Grams</option>
-            <option value='hundredg'>One Hundred Grams</option>
-            <option value='fivehundg'>Five Hundred Grams</option>
-            <option value='thousandg'>One Thousand Grams</option>
-          </select>
-          <div className="addTerpToCart">
-          <div className="TARButtons">
-            <button
-              className="TARButton"
-              onClick={()=>{(amount>0) ? setAmount(amount-1) : setAmount(amount)}}
-            >
-            -</button>
-            {amount}
-            <button
-              className="TARButton"
-              onClick={()=>setAmount(amount+1)}
-            >+</button>
-          </div>
-          <button 
-            className="terpeneButton" 
-            onClick={()=>{
+					<select
+						className="selectForm"
+						id="size"
+						name="size"
+						onChange={(event) => setSize(event.target.value)}
+					>
+						<option value="fiveg">Five Grams</option>
+						<option value="twentyg">Twenty Grams</option>
+						<option value="fiftyg">Fifty Grams</option>
+						<option value="hundredg">One Hundred Grams</option>
+						<option value="fivehundg">Five Hundred Grams</option>
+						<option value="thousandg">One Thousand Grams</option>
+					</select>
+				</div>
+				<div className="under-image-box">
+					<div className="TARButtons">
+						<button
+							className="TARButton"
+							onClick={() => {
+								amount > 0 ? setAmount(amount - 1) : setAmount(amount);
+							}}
+						>
+							-
+						</button>
+						{amount}
+						<button className="TARButton" onClick={() => setAmount(amount + 1)}>
+							+
+						</button>
+					</div>
+					<button
+						className="terpeneButton"
+						onClick={() => {
 							let cartItemObj = props.terpene;
-              cartItemObj.quantity = amount;
+							cartItemObj.quantity = amount;
 							cartItemObj.size = size;
-							props.addProduct(`TRP${size}${props.terpene.id}`, cartItemObj)
+							props.addProduct(`TRP${size}${props.terpene.id}`, cartItemObj);
 						}}
-          >
-          Add to Cart
-          </button>
-        </div>
-        </div>
+					>
+						Add to Cart
+					</button>
+				</div>
 			</div>
 		</div>
 	);
